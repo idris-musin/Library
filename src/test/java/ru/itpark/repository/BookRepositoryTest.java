@@ -10,7 +10,7 @@ class BookRepositoryTest {
     @Test
     public void addOneBook() {
         BookRepository repository = new BookRepository();
-        Book book = new Book(1, "", "", "", 0);
+        Book book = new Book(1, "", "", "", null);
 
         repository.add(book);
 
@@ -22,8 +22,8 @@ class BookRepositoryTest {
     @Test
     public void addTwoBook() {
         BookRepository repository = new BookRepository();
-        Book first = new Book(1, "", "", "", 0);
-        Book second = new Book(2, "", "", "", 0);
+        Book first = new Book(1, "", "", "", null);
+        Book second = new Book(2, "", "", "", null);
 
         repository.add(first);
         repository.add(second);
