@@ -43,14 +43,14 @@ class BookServiceTest {
         BookRepository repository = new BookRepository();
         BookService service = new BookService(repository);
 
-        service.create("", "Лев Толстой".toLowerCase(), "", "");
-        service.create("", "Алексей Толстой".toLowerCase(), "", "");
-        service.create("", "Александр Пушкин".toLowerCase(), "", "");
+        service.create("", "Stephen king".toLowerCase(), "", "");
+        service.create("", "Patrick KING".toLowerCase(), "", "");
+        service.create("", "William Shakespeare".toLowerCase(), "", "");
 
-        Book[] books = service.search(null, "толстой", null, null);
+        Book[] books = service.search(null, "king", null, null);
 
-        assertEquals("Лев Толстой".toLowerCase(), books[0].getAuthor());
-        assertEquals("Алексей Толстой".toLowerCase(), books[1].getAuthor());
+        assertEquals("Stephen king".toLowerCase(), books[0].getAuthor());
+        assertEquals("Patrick KING".toLowerCase(), books[1].getAuthor());
     }
 
     @Test
@@ -58,14 +58,14 @@ class BookServiceTest {
         BookRepository repository = new BookRepository();
         BookService service = new BookService(repository);
 
-        service.create("","","Роман, Приключения".toLowerCase(), "");
-        service.create("","","приКлючения".toLowerCase(),"");
+        service.create("","","Novel, Adventure".toLowerCase(), "");
+        service.create("","","adVenture".toLowerCase(),"");
         service.create("","","фантастика".toLowerCase(),"");
 
-        Book[] books = service.search(null, null, "приключения", null);
+        Book[] books = service.search(null, null, "adventure", null);
 
-        assertEquals("Роман, Приключения".toLowerCase(), books[0].getGenre());
-        assertEquals("приКлючения".toLowerCase(), books[1].getGenre());
+        assertEquals("Novel, Adventure".toLowerCase(), books[0].getGenre());
+        assertEquals("adVenture".toLowerCase(), books[1].getGenre());
     }
 
     @Test
