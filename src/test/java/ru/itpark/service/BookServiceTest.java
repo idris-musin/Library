@@ -60,7 +60,7 @@ class BookServiceTest {
 
         service.create("","","Novel, Adventure".toLowerCase(), "");
         service.create("","","adVenture".toLowerCase(),"");
-        service.create("","","фантастика".toLowerCase(),"");
+        service.create("","","fantasy".toLowerCase(),"");
 
         Book[] books = service.search(null, null, "adventure", null);
 

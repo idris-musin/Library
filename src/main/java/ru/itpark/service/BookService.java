@@ -27,19 +27,19 @@ public class BookService {
                 continue;
             }
 
-            if ((name != null) && !book.getName().contains(name)) {
+            if (name != null && !book.getName().contains(name)) {
                 continue;
             }
 
-            if ((author != null) && !book.getAuthor().contains(author)) {
+            if (author != null && !book.getAuthor().contains(author)) {
                 continue;
             }
 
-            if ((genre != null) && !book.getGenre().contains(genre)) {
+            if (genre != null && !book.getGenre().contains(genre)) {
                 continue;
             }
 
-            if ((isbn != null) && !book.getIsbn().contains(isbn)) {
+            if (isbn != null && !book.getIsbn().contains(isbn)) {
                 continue;
             }
 
