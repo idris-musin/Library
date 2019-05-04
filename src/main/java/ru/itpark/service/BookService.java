@@ -5,7 +5,7 @@ import ru.itpark.repository.BookRepository;
 
 public class BookService {
     private BookRepository repository;
-    int nextId = 1;
+    private int nextId = 1;
 
     public BookService(BookRepository repository) {
         this.repository = repository;
